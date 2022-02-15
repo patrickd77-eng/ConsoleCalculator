@@ -1,24 +1,40 @@
 namespace ConsoleCalculator.Validation
 {
     public class Validate
-    {        
-        public static bool ValidateNumber(string number){
-          
-            var valid = false;
+    {
+        public static bool ValidateNumber(string input)
+        {
+
+            var valid = true;
 
             //todo
-                  
+
 
             return valid;
         }
 
-        public static bool ValidateOperand(string operand)
+        public static bool ValidateOperand(string input)
         {
-            var valid = false;
+            var valid = true;
 
             //todo
 
             return valid;
+        }
+
+        public static bool ContinueUsing()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Enter 'Y' to continue or any other key to quit.");
+            Console.ForegroundColor = ConsoleColor.White;
+            if (Console.ReadLine().ToString().Trim().ToUpper() == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
