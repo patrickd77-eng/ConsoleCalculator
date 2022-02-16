@@ -26,7 +26,7 @@ namespace ConsoleCalculator.Validation
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Enter 'Y' to continue or any other key to quit.");
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ResetColor();
             if (Console.ReadLine().ToString().Trim().ToUpper() == "Y")
             {
                 return true;

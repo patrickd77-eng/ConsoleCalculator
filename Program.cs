@@ -7,19 +7,19 @@ var programActive = true;
 do
 {
 
-    Console.ForegroundColor = ConsoleColor.Red;
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Please enter a number....");
-    Console.ForegroundColor = ConsoleColor.White;
+    Console.ResetColor();
     string numberOne = Console.ReadLine();
 
-    Console.ForegroundColor = ConsoleColor.Red;
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Please enter an operand... EG + OR - OR * OR / OR %");
-    Console.ForegroundColor = ConsoleColor.White;
+    Console.ResetColor();
     string operand = Console.ReadLine();
 
-    Console.ForegroundColor = ConsoleColor.Red;
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Please enter a second number....");
-    Console.ForegroundColor = ConsoleColor.White;
+    Console.ResetColor();
     string numberTwo = Console.ReadLine();
 
 
@@ -32,7 +32,7 @@ do
     }
     else
     {
-        Console.WriteLine("You entered an invalid input. You need to try again.");
+        Console.WriteLine("You enteGreen an invalid input. You need to try again.");
 
     }
 
