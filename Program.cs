@@ -4,6 +4,10 @@ using ConsoleCalculator.Colors;
 
 var programActive = true;
 
+Colors.MakeConsoleCyan();
+Console.WriteLine("This is a freetext calculator that takes in a sring, eg \"5 + 5\", and returns the result.");
+Console.ResetColor();
+
 do
 {
     Colors.MakeConsoleGreen();
@@ -23,9 +27,8 @@ do
 
     if (numberOne != "Invalid" && numberTwo != "Invalid" && operand != "Invalid")
     {
-        var result = Calculate.Calculation(numberOne, operand, numberTwo);
         Colors.MakeConsoleGreen();
-        Console.WriteLine("The result is: " + result);
+        Console.WriteLine(Calculate.Calculation(numberOne, operand, numberTwo));
         Console.ResetColor();
         programActive = Validate.ContinueUsing();
     }
@@ -35,6 +38,5 @@ do
         Console.WriteLine("You entered an invalid input. You need to try again.");
         Console.ResetColor();
     }
-
 }
 while (programActive);

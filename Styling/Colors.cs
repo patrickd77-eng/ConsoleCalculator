@@ -6,10 +6,13 @@ namespace ConsoleCalculator.Colors
         {
             Console.ForegroundColor = ConsoleColor.Green;
         }
-
         public static void MakeConsoleRed()
         {
             Console.ForegroundColor = ConsoleColor.Red;
+        }
+        public static void MakeConsoleCyan()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
         }
     }
 }
