@@ -13,7 +13,7 @@ do
     string numberOne = Console.ReadLine();
 
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Please enter an operand... EG + OR - OR * OR / OR %");
+    Console.WriteLine("Please enter an operator... EG + OR - OR * OR / OR %");
     Console.ResetColor();
     string operand = Console.ReadLine();
 
