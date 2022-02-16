@@ -7,31 +7,33 @@ var programActive = true;
 do
 {
     Colors.MakeConsoleGreen();
-    Console.WriteLine("Please enter a number....");
-    Colors.ResetConsole();
-    string? numberOne = Console.ReadLine();
+    Console.WriteLine("Please enter a number: EG 5");
+    Console.ResetColor();
+    string? numberOne = Validate.GetAndValidateNumber();
 
     Colors.MakeConsoleGreen();
-    Console.WriteLine("Please enter an operator... EG + OR - OR * OR / OR %");
-    Colors.ResetConsole();
-    string? operand = Console.ReadLine();
+    Console.WriteLine("Please enter an operator: EG + - * / %");
+    Console.ResetColor();
+    string? operand = Validate.GetAndValidateOperator();
 
     Colors.MakeConsoleGreen();
-    Console.WriteLine("Please enter a second number....");
-    Colors.ResetConsole();
-    string? numberTwo = Console.ReadLine();
+    Console.WriteLine("Please enter a second number: EG 6");
+    Console.ResetColor();
+    string? numberTwo = Validate.GetAndValidateNumber();
 
-    if (Validate.ValidateNumber(numberOne ?? string.Empty) && Validate.ValidateNumber(numberTwo ?? string.Empty) && Validate.ValidateOperand(operand ?? string.Empty))
+    if (numberOne != "Invalid" && numberTwo != "Invalid" && operand != "Invalid")
     {
         var result = Calculate.Calculation(numberOne, operand, numberTwo);
         Colors.MakeConsoleGreen();
         Console.WriteLine("The result is: " + result);
-        Colors.ResetConsole();
+        Console.ResetColor();
         programActive = Validate.ContinueUsing();
     }
     else
     {
+        Colors.MakeConsoleRed();
         Console.WriteLine("You entered an invalid input. You need to try again.");
+        Console.ResetColor();
     }
 
 }

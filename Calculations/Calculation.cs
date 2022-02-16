@@ -5,12 +5,16 @@ namespace ConsoleCalculator.Calculation
     {
         public static string Calculation(string? numberOne, string? operand, string? numberTwo)
         {
-
-            string math = numberOne + operand + numberTwo;
-
-            string ?result = new DataTable().Compute(math, null).ToString();
-
-            return result ?? "No result.";
+            try
+            {
+                string math = numberOne + operand + numberTwo;
+                string? result = new DataTable().Compute(math, null).ToString();
+                return result ?? "No result.";
+            }
+            catch (SyntaxErrorException e)
+            {
+                throw new Exception("Invalid syntax: " + e);
+            }
         }
     }
 }

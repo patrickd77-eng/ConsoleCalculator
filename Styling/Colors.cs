@@ -7,9 +7,9 @@ namespace ConsoleCalculator.Colors
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
-        public static void ResetConsole()
+        public static void MakeConsoleRed()
         {
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }
