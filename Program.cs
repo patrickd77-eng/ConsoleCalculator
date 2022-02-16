@@ -21,7 +21,7 @@ do
     Colors.ResetConsole();
     string? numberTwo = Console.ReadLine();
 
-    if (Validate.ValidateNumber(numberOne) && Validate.ValidateNumber(numberTwo) && Validate.ValidateOperand(operand))
+    if (Validate.ValidateNumber(numberOne ?? string.Empty) && Validate.ValidateNumber(numberTwo ?? string.Empty) && Validate.ValidateOperand(operand ?? string.Empty))
     {
         var result = Calculate.Calculation(numberOne, operand, numberTwo);
         Colors.MakeConsoleGreen();

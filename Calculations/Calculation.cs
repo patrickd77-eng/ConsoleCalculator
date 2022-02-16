@@ -8,12 +8,9 @@ namespace ConsoleCalculator.Calculation
 
             string math = numberOne + operand + numberTwo;
 
-            string result = new DataTable().Compute(math, null).ToString();
+            string ?result = new DataTable().Compute(math, null).ToString();
 
-
-            return result;
-
-
+            return result ?? "No result.";
         }
     }
 }
