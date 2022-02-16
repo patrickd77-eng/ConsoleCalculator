@@ -3,7 +3,7 @@ namespace ConsoleCalculator.Calculation
 {
     public class Calculate
     {
-        public static string Calculation(string numberOne, string operand, string numberTwo)
+        public static string Calculation(string? numberOne, string? operand, string? numberTwo)
         {
 
             string math = numberOne + operand + numberTwo;

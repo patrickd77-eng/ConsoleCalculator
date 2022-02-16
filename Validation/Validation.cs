@@ -13,7 +13,7 @@ namespace ConsoleCalculator.Validation
             return valid;
         }
 
-        public static bool ValidateOperand(string input)
+        public static bool ValidateOperand(string? input)
         {
             var valid = true;
 

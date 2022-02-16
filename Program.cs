@@ -1,47 +1,38 @@
 ﻿using ConsoleCalculator.Calculation;
 using ConsoleCalculator.Validation;
-
+using ConsoleCalculator.Colors;
 
 var programActive = true;
 
 do
 {
-
-    Console.ForegroundColor = ConsoleColor.Green;
+    Colors.MakeConsoleGreen();
     Console.WriteLine("Please enter a number....");
-    Console.ResetColor();
-    string numberOne = Console.ReadLine();
+    Colors.ResetConsole();
+    string? numberOne = Console.ReadLine();
 
-    Console.ForegroundColor = ConsoleColor.Green;
+    Colors.MakeConsoleGreen();
     Console.WriteLine("Please enter an operator... EG + OR - OR * OR / OR %");
-    Console.ResetColor();
-    string operand = Console.ReadLine();
+    Colors.ResetConsole();
+    string? operand = Console.ReadLine();
 
-    Console.ForegroundColor = ConsoleColor.Green;
+    Colors.MakeConsoleGreen();
     Console.WriteLine("Please enter a second number....");
-    Console.ResetColor();
-    string numberTwo = Console.ReadLine();
-
+    Colors.ResetConsole();
+    string? numberTwo = Console.ReadLine();
 
     if (Validate.ValidateNumber(numberOne) && Validate.ValidateNumber(numberTwo) && Validate.ValidateOperand(operand))
     {
         var result = Calculate.Calculation(numberOne, operand, numberTwo);
+        Colors.MakeConsoleGreen();
         Console.WriteLine("The result is: " + result);
+        Colors.ResetConsole();
         programActive = Validate.ContinueUsing();
-
     }
     else
     {
-        Console.WriteLine("You enteGreen an invalid input. You need to try again.");
-
+        Console.WriteLine("You entered an invalid input. You need to try again.");
     }
 
 }
 while (programActive);
-
-
-
-
-
-
-
